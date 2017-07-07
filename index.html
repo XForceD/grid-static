@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="GridApp" style="height: 100%;" ng-controller="GetGridParams">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.29/angular-animate.js"></script>	
+<!--
+	<script src="libs/angular-1.2.29/angular.js"></script>
+	<script src="libs/angular-1.2.29/angular-animate.js"></script>
+-->	
+	<script type ="text/javascript" src="libs/show_grid.js"></script>
+	<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+	<script src="libs/common.js"></script>
+	<link rel="stylesheet" href="style.css" type="text/css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">	
+</head>
+<header style="height: 5%;">
+<!--		Column number: {{gridparams_columns}} -- Row number:{{gridparams_rows}} -- Column number visible: {{gridparams_columns_visible}}  --  Row number visible:{{gridparams_rows_visible}}
+	<form>
+		Grid Size:<input type="number" ng-model="gridparams_size" min="1" ng-model-instant ng-change="refreshgrid(0)"> Grid visible Size: {{gridparams_size_visible}}
+	</form>	
+-->
+</header>
+<body style="height: 90%;">
+<div style="width:100%;height:100%;" ng-mouse-wheel-up="zoom_in()" ng-mouse-wheel-down="zoom_out()">
+	<table border="0" style="width:100%;height:100%;" >
+		<tr ng-repeat="row in grid | filter:{visible:1}" class="animation">
+			<td ng-repeat="cell in row.cells | filter:{visible:1}" ng-click="CellClick(cell)" class="animation">
+				<img align="middle" ng-style="{'width':cell.image.style_to_ng.width+'px', 'height':cell.image.style_to_ng.height+'px'}" ng-src="{{cell.image.src}}" alt="{{cell.image.alt}}">
+			</td>
+		</tr>
+	</table>
+</div>
+ <div id="my_video_container" >
+    <video id="localVideo" autoplay muted></video>
+    <div id="start_video_button"><button id="startButton"><i class="material-icons">videocam</i></button></div>
+	<script src="libs/get_video.js"></script>	
+ </div>
+</body>
+<footer style="height: 5%;">
+</footer>
+</html>

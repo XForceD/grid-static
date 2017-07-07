@@ -1,0 +1,73 @@
+body {
+  font-family: Arial;
+}
+
+.container {
+  max-width: 600px;
+}
+
+p {
+  border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid rgb(194, 194, 194);
+  width: 17%;
+  float: left;
+  margin: 0.6%;
+  padding: 20px 0;
+  background: #EBEBEB;
+  text-shadow: 1px 1px white;
+  text-align: center;
+}
+
+#my_video_container { 
+    width:  320px !important; 
+    height: 180px !important; 
+	overflow: hidden;
+    background-color: #666699; 
+	position:fixed;
+	bottom:10px;
+	right: 10px;
+	z-index: 20;
+}
+
+.my_video_container .video {
+      top: 0;
+      left: 0;
+      width: 320px !important; 
+      height: 168px !important;
+	  z-index: -20;
+}
+
+#start_video_button {
+	z-index: 20;
+	top: 140px;
+    left: 0px;
+}
+
+#startButton {
+	z-index: 20;
+	top: 140px;
+    left: 0px;
+}
+
+.animation { -webkit-transition: 1s; }
+
+.animation.ng-enter-stagger{
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+  -webkit-transition-duration:1s;
+  transition-duration:1s;
+},
+.animation.ng-leave-stagger{
+  -webkit-transition-delay: 1s;
+  transition-delay: 1s;
+  -webkit-transition-duration:1s;
+  transition-duration:1s;
+
+}
+
+.animation.ng-leave { opacity: 1; transition: 0.1s;}
+.animation.ng-leave.ng-leave-active { opacity: 0; transition: 0s;}
+
+.animation.ng-enter { opacity: 0; transition: 0.3s;}
+.animation.ng-enter.ng-enter-active { opacity: 1; }
