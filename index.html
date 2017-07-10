@@ -25,7 +25,7 @@
 	<table border="0" style="width:100%;height:100%;" >
 		<tr ng-repeat="row in grid | filter:{visible:1}" class="animation">
 			<td ng-repeat="cell in row.cells | filter:{visible:1}" ng-click="CellClick(cell)" class="animation">
-				<img align="middle" ng-style="{'width':cell.image.style_to_ng.width+'px', 'height':cell.image.style_to_ng.height+'px'}" ng-src="{{cell.image.src}}" alt="{{cell.image.alt}}">
+				<img id="grid_cell_image" align="middle" ng-style="{'width':cell.image.style_to_ng.width+'px', 'height':cell.image.style_to_ng.height+'px'}" ng-src="{{cell.image.src}}" alt="{{cell.image.alt}}">
 			</td>
 		</tr>
 	</table>

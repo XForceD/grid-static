@@ -1,5 +1,6 @@
 body {
   font-family: Arial;
+  background-color: #5b5b5b; 
 }
 
 .container {
@@ -28,6 +29,11 @@ p {
 	bottom:10px;
 	right: 10px;
 	z-index: 20;
+}
+
+#grid_cell_image{
+      background: url('img/squares.gif') no-repeat;
+	  background-position:center;
 }
 
 .my_video_container .video {
